@@ -1,0 +1,24 @@
+@charset "UTF-8";
+body {
+    font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
+        sans-serif !important;
+    overflow: auto;
+}
+
+.title-bar {
+    height: 80px;
+    background-color: #324157;
+    color: white
+}
+
+.title-bar .title-text {
+	font-size: 24px;
+	font-weight: bold;
+	
+}
+
+.title-bar .menu-text {
+	font-size: 24px;
+	font-weight: bold;
+	color: white
+}

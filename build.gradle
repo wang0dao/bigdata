@@ -1,0 +1,43 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+	//compile "org.springframework.boot:spring-boot-starter-security"	
+	
+	//JPA + Hibernate + PostgreSQL
+	compile "org.springframework.boot:spring-boot-starter-data-jpa"
+	providedRuntime "org.postgresql:postgresql:9.4.1212"
+	
+	//Devtools
+	compile("org.springframework.boot:spring-boot-devtools")
+	
+	//Sitemesh3
+	compile "org.sitemesh:sitemesh:3.0.1"
+	
+	//Java EE
+	providedRuntime 'javax.servlet:jstl'
+    providedRuntime "javax.servlet.jsp:javax.servlet.jsp-api"
+    
+    // Embedded Tomcat
+    providedRuntime "org.springframework.boot:spring-boot-starter-tomcat"
+    providedRuntime "org.apache.tomcat.embed:tomcat-embed-core"
+    providedRuntime "org.apache.tomcat.embed:tomcat-embed-jasper"
+}
