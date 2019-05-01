@@ -25,6 +25,6 @@
   			</vue-col>
 		</vue-row>
 	</div>
-	<jsp:include page="detailsJs.jsp" />
+	<jsp:include page="homepageJs.jsp" />
 </body>
 </html>
